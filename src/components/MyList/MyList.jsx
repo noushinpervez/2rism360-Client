@@ -55,7 +55,7 @@ const MyList = () => {
     const TABLE_HEAD = ["Tourist Sport Name", "Location", "Average Cost", "Seasonality", "Travel Time", "Total Visitors Per Year", ""];
 
     return (
-        <section className={ `bg-background p-6 flex flex-col items-center` }>
+        <section className={ `bg-background p-6 lg:p-12 flex flex-col items-center` }>
             <h3 className="text-2xl text-primary">List of { user.displayName }</h3>
             {
                 myList.length > 0 ? (

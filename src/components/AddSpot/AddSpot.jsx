@@ -42,7 +42,7 @@ const AddSpot = () => {
     };
 
     return (
-        <section className="p-6 bg-background">
+        <section className="p-6 lg:p-12 bg-background">
             <form className="container flex flex-col mx-auto space-y-12 text-text font-medium" onSubmit={ handleAddSpot }>
                 <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-primary-10">
                     <div className="space-y-2 col-span-full lg:col-span-1 text-primary">
