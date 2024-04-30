@@ -9,7 +9,7 @@ import AddSpot from "../components/AddSpot/AddSpot";
 import MyList from "../components/MyList/MyList";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import UpdateTouristSpot from "../components/UpdateTouristSpot/UpdateTouristSpot";
-// import TouristSpotDetails from "../components/TouristSpotDetails/TouristSpotDetails";
+import TouristSpotDetails from "../components/TouristSpotDetails/TouristSpotDetails";
 
 export const router = createBrowserRouter([
     {
@@ -52,6 +52,12 @@ export const router = createBrowserRouter([
                     <UpdateTouristSpot />
                 </PrivateRoute>,
             },
+            {
+                path: "/tourist-spot/:id",
+                element: <PrivateRoute>
+                    <TouristSpotDetails />
+                </PrivateRoute>
+            }
         ],
     },
 ]);
