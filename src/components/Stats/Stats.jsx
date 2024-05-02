@@ -5,11 +5,9 @@ import { IoStarOutline } from "react-icons/io5";
 
 const Stats = () => {
     return (
-        <section className="bg-background text-text lg:pt-20 pt-10 px-6">
-            <h3 className="text-center text-2xl mb-12">Why book 2rism360?</h3>
-
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 justify-between">
-                
+        <section className="bg-background text-text lg:py-20 py-10 px-3">
+            <h3 className="text-center text-2xl mb-12 tracking-widest text-primary">Why book 2rism360?</h3>
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-20 justify-between">
                 <div className="flex flex-col gap-2 text-center items-center relative lg:w-fit">
                     <IoTicketOutline className="w-8 h-8 z-10" />
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -20,7 +18,6 @@ const Stats = () => {
                     <p className="mt-4 font-bold text-xl z-10">Free cancellation</p>
                     <p className="font-semibold z-10">Stay flexible on your trip.</p>
                 </div>
-
                 <div className="flex flex-col gap-2 text-center items-center relative lg:w-fit">
                     <PiParachute className="w-8 h-8 z-10" />
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -31,7 +28,6 @@ const Stats = () => {
                     <p className="mt-4 font-bold text-xl z-10">300,000+ experiences</p>
                     <p className="font-semibold z-10">Make memories around the world.</p>
                 </div>
-
                 <div className="flex flex-col gap-2 text-center items-center relative lg:w-fit">
                     <IoCalendarOutline className="w-8 h-8 z-10" />
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -42,7 +38,6 @@ const Stats = () => {
                     <p className="mt-4 font-bold text-xl z-10">Reserve now, pay later</p>
                     <p className="font-semibold z-10">Book your spot.</p>
                 </div>
-
                 <div className="flex flex-col gap-2 text-center items-center relative">
                     <IoStarOutline className="w-8 h-8 z-10" />
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -53,9 +48,7 @@ const Stats = () => {
                     <p className="mt-4 font-bold text-xl z-10">Trusted reviews</p>
                     <p className="font-semibold z-10">4.3 stars from 140,000+ Trustpilot reviews.</p>
                 </div>
-
             </div>
-            
         </section>
     );
 };

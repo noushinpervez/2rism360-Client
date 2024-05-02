@@ -10,10 +10,10 @@ const Root = () => {
 
     useEffect(() => {
         if (location.pathname === "/") {
-            document.title = `2rism360 | HOME`;
+            document.title = `2RISM360 | HOME`;
         }
         else {
-            document.title = `2rism360 ${location.pathname.replace("/", "| ").replace("-", " ").toUpperCase()}`;
+            document.title = `2RISM360 ${location.pathname.replace("/", "| ").replace("-", " ").replace("countries/", "").toUpperCase()}`;
         }
 
         if (location.state) {
@@ -23,11 +23,16 @@ const Root = () => {
 
     const storedTheme = localStorage.getItem("theme") || "light";
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>
+
             <ToastContainer
                 position="top-right"
                 autoClose={ 3000 }

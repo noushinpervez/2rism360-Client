@@ -21,7 +21,7 @@ const Newsletter = () => {
     };
 
     return (
-        <section className="lg:pb-20 pb-10 bg-background">
+        <section className="lg:py-20 py-10 bg-background">
             <div style={ {
                 backgroundImage: `linear-gradient(to top, rgba(14,22,27,0.4), rgba(14,22,27,0.4)), url("https://images.unsplash.com/photo-1471922694854-ff1b63b20054?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")`,
                 backgroundSize: 'cover',

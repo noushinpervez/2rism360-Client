@@ -10,7 +10,7 @@ import MyList from "../components/MyList/MyList";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import UpdateTouristSpot from "../components/UpdateTouristSpot/UpdateTouristSpot";
 import TouristSpotDetails from "../components/TouristSpotDetails/TouristSpotDetails";
-import Country from "./components/Country/Country"
+import Country from "../components/Country/Country";
 
 export const router = createBrowserRouter([
     {
@@ -54,14 +54,14 @@ export const router = createBrowserRouter([
                 </PrivateRoute>,
             },
             {
-                path: "/tourist-spot/:id",
+                path: "/tourist-spots/:id",
                 element: <PrivateRoute>
                     <TouristSpotDetails />
-                </PrivateRoute>
+                </PrivateRoute>,
             },
             {
-                path: "/country/:id",
-                element: <Country></Country>
+                path: "/countries/:country",
+                element: <Country></Country>,
             },
         ],
     },

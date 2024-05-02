@@ -47,9 +47,9 @@ const AddSpot = () => {
     }, []);
 
     return (
-        <section className="p-6 lg:p-12 bg-background">
-            <form className="container flex flex-col mx-auto space-y-12 text-text font-medium" onSubmit={ handleAddSpot }>
-                <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm bg-primary-10">
+        <section className="lg:px-0 px-6 py-10 bg-background">
+            <form className="container flex flex-col mx-auto space-y-12 text-text font-medium text-base" onSubmit={ handleAddSpot }>
+                <fieldset className="grid grid-cols-4 gap-6 lg:p-6 p-3 rounded-md shadow-sm bg-primary-10">
                     <div className="space-y-2 col-span-full lg:col-span-1 text-primary">
                         <p className="text-2xl font-semibold">Add Tourists Spot</p>
                         <p className="opacity-80">Contribute by Sharing Your Favorite Destinations in SouthEast Asia</p>
@@ -79,7 +79,7 @@ const AddSpot = () => {
                             <label htmlFor="address" className="opacity-80">Location</label>
                             <input id="location" type="text" placeholder="Chittagong, Bangladesh" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required />
                         </div>
-                        <div className="col-span-full">
+                        <div className="col-span-full lg:text-base text-sm">
                             <label htmlFor="text" className="opacity-80">Short Description</label>
                             <textarea id="short_description" placeholder="Your short description here..." className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required></textarea>
                         </div>

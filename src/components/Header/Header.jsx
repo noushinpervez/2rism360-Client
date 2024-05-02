@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { MobileNav, IconButton, Tooltip } from "@material-tailwind/react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import useAuth from "../Hooks/useAuth"
+import useAuth from "../Hooks/useAuth";
 
 const Header = () => {
     const { logout, user } = useAuth();
@@ -104,8 +104,6 @@ const Header = () => {
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{ navList }</div>
                     <div className="flex items-center gap-x-1">
-
-                        {/* dark mode button */ }
                         <button className="inline-flex items-center gap-x-2 py-2 px-3 rounded-full text-sm text-inverse-text" onClick={ handleThemeSwitch } style={ { background: "linear-gradient(120deg, var(--primary), var(--accent))" } }>
                             { theme === "dark" ? (
                                 <>
@@ -124,12 +122,11 @@ const Header = () => {
                             ) }
                         </button>
                     </div>
-
                     {
                         user ? (
                             <>
                                 <Tooltip content={ <div>{ user.displayName }</div> }>
-                                    <img alt="" className="w-10 h-10 rounded-full ring-2 ring-offset-1 ring-primary mr-3" src={ getProfileImage() } />
+                                    <img alt={ user.displayName } className="w-10 h-10 rounded-full ring-2 ring-offset-1 ring-primary mr-3" src={ getProfileImage() } />
                                 </Tooltip>
                                 <button className="relative items-center justify-start px-5 py-3 overflow-hidden font-bold rounded-full group hidden lg:inline-flex text-xl" onClick={ logout }>
                                     <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-secondary opacity-[3%]"></span>
@@ -140,15 +137,12 @@ const Header = () => {
                             </>
                         ) : (
                             <>
-                                {/* login */ }
                                 <Link to="/login" className="relative items-center justify-start px-5 py-3 overflow-hidden font-bold rounded-full group hidden lg:inline-flex text-xl">
                                     <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-secondary opacity-[3%]"></span>
                                     <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-secondary opacity-100 group-hover:-translate-x-8"></span>
                                     <p className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-[#eef0f1]">Login</p>
                                     <span className="absolute inset-0 border-2 border-primary rounded-full"></span>
                                 </Link>
-
-                                {/* signup */ }
                                 <Link to="/signup" className="relative items-center justify-start px-5 py-3 overflow-hidden font-bold rounded-full group hidden lg:inline-flex bg-primary text-inverse-text text-xl">
                                     <span className="w-32 h-32 rotate-45 translate-x-12 -translate-y-2 absolute left-0 top-0 bg-secondary opacity-[3%]"></span>
                                     <span className="absolute top-0 left-0 w-48 h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56 -translate-y-24 bg-secondary opacity-100 group-hover:-translate-x-8"></span>
@@ -158,7 +152,6 @@ const Header = () => {
                             </>
                         )
                     }
-
                     <IconButton
                         variant="text"
                         className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -198,7 +191,6 @@ const Header = () => {
                     </IconButton>
                 </div>
             </div>
-
             <MobileNav open={ openNav }>
                 { navList }
                 <div className="flex items-center gap-x-1 px-2">
@@ -207,7 +199,7 @@ const Header = () => {
                         user ? (
                             <>
                                 <Tooltip content={ <div>{ user.displayName }</div> }>
-                                    <img alt="" className="w-10 h-10 rounded-full ring-2 ring-offset-1 ring-primary mr-3" src={ getProfileImage() } />
+                                    <img alt={ user.displayName } className="w-10 h-10 rounded-full ring-2 ring-offset-1 ring-primary mr-3" src={ getProfileImage() } />
                                 </Tooltip>
                                 <button className="flex items-center justify-center px-4 py-2 leading-6 whitespace-no-wrap bg-transparent border-2 border-primary rounded-full shadow-sm hover:bg-secondary focus:outline-none flex-1 transition-all ease-in-out duration-500 text-lg" onClick={ logout }>
                                     <p>Logout</p>
@@ -215,12 +207,9 @@ const Header = () => {
                             </>
                         ) : (
                             <>
-                                {/* login */ }
                                 <Link to="/login" className="flex items-center justify-center px-4 py-2 leading-6 whitespace-no-wrap bg-transparent border-2 border-primary rounded-full shadow-sm hover:bg-secondary focus:outline-none flex-1 transition-all ease-in-out duration-500 text-lg">
                                     <p>Login</p>
                                 </Link>
-
-                                {/* signup */ }
                                 <Link to="/signup" className="flex items-center justify-center px-4 py-2 leading-6 whitespace-no-wrap border-2 border-primary bg-secondary rounded-full shadow-sm hover:bg-transparent focus:outline-none flex-1 transition-all ease-in-out duration-500 text-lg">
                                     <p>Signup</p>
                                 </Link>
