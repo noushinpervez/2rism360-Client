@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import useAuth from "../Hooks/useAuth";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -41,6 +42,10 @@ const AddSpot = () => {
             })
     };
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <section className="p-6 lg:p-12 bg-background">
             <form className="container flex flex-col mx-auto space-y-12 text-text font-medium" onSubmit={ handleAddSpot }>
@@ -52,55 +57,55 @@ const AddSpot = () => {
                     <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
                         <div className="col-span-full sm:col-span-3">
                             <label htmlFor="url" className="opacity-80">Image URL</label>
-                            <input id="image" type="text" placeholder="www.imgbb.com" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" />
+                            <input id="image" type="text" placeholder="www.imgbb.com" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required />
                         </div>
                         <div className="col-span-full sm:col-span-3">
                             <label htmlFor="name" className="opacity-80">Tourist Spot Name</label>
-                            <input id="tourist_spot_name" type="text" placeholder="Cox's Bazar" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" />
+                            <input id="tourist_spot_name" type="text" placeholder="Cox's Bazar" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required />
                         </div>
                         <div className="col-span-full sm:col-span-3">
                             <label htmlFor="name" className="opacity-80">Country Name</label>
-                            <select id="country_name" type="text" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70">
+                            <select id="country_name" type="text" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required>
                                 <option className="bg-background" value="">Please choose a country</option>
-                                <option className="bg-background" value="bangladesh">Bangladesh</option>
-                                <option className="bg-background" value="thailand">Thailand</option>
-                                <option className="bg-background" value="indonesia">Indonesia</option>
-                                <option className="bg-background" value="malaysia">Malaysia</option>
-                                <option className="bg-background" value="vietnam">Vietnam</option>
-                                <option className="bg-background" value="cambodia">Cambodia</option>
+                                <option className="bg-background" value="Bangladesh">Bangladesh</option>
+                                <option className="bg-background" value="Thailand">Thailand</option>
+                                <option className="bg-background" value="Indonesia">Indonesia</option>
+                                <option className="bg-background" value="Malaysia">Malaysia</option>
+                                <option className="bg-background" value="Vietnam">Vietnam</option>
+                                <option className="bg-background" value="Cambodia">Cambodia</option>
                             </select>
                         </div>
                         <div className="col-span-full">
                             <label htmlFor="address" className="opacity-80">Location</label>
-                            <input id="location" type="text" placeholder="Chittagong, Bangladesh" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" />
+                            <input id="location" type="text" placeholder="Chittagong, Bangladesh" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required />
                         </div>
                         <div className="col-span-full">
                             <label htmlFor="text" className="opacity-80">Short Description</label>
-                            <textarea id="short_description" placeholder="Your short description here..." className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70"></textarea>
+                            <textarea id="short_description" placeholder="Your short description here..." className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required></textarea>
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label htmlFor="text" className="opacity-80">Average Cost</label>
-                            <input id="average_cost" type="number" placeholder="10000 BDT" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" />
+                            <input id="average_cost" type="number" placeholder="10000 BDT" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required />
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label htmlFor="text" className="opacity-80">Seasonality</label>
-                            <input id="seasonality" type="text" placeholder="Winter" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" />
+                            <input id="seasonality" type="text" placeholder="Winter" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required />
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label htmlFor="text" className="opacity-80">Travel Time</label>
-                            <input id="travel_time" type="number" step="0.01" placeholder="7 days" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" />
+                            <input id="travel_time" type="number" step="0.01" placeholder="7 days" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required />
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label htmlFor="text" className="opacity-80">Total Visitors Per Year</label>
-                            <input id="totalVisitorsPerYear" type="number" placeholder="10000" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" />
+                            <input id="totalVisitorsPerYear" type="number" placeholder="10000" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" required />
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label htmlFor="email" className="opacity-80">User Email</label>
-                            <input id="email" type="email" placeholder="user@gmail.com" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" />
+                            <input id="email" type="email" placeholder="user@gmail.com" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" defaultValue={ user?.email } required />
                         </div>
                         <div className="col-span-full sm:col-span-2">
                             <label htmlFor="name" className="opacity-80">Username</label>
-                            <input id="username" type="Username" placeholder="Username" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" />
+                            <input id="username" type="Username" placeholder="Username" className="w-full rounded-md focus:ring-2 focus:ring-opacity-75 focus:ring-primary p-2 border focus:border-primary focus:ring-offset-2 focus:outline-none transition-colors duration-500 bg-primary-70" defaultValue={ user?.displayName } required />
                         </div>
                         <div className="lg:col-span-1 col-span-full">
                             <button type="submit" className="flex w-full items-center justify-center px-4 py-2 text-base font-medium leading-6 text-inverse-text whitespace-no-wrap bg-primary border-2 border-transparent rounded-md shadow-sm hover:bg-transparent hover:text-text hover:border-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-500">

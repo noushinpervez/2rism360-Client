@@ -54,6 +54,10 @@ const MyList = () => {
 
     const TABLE_HEAD = ["Tourist Sport Name", "Location", "Average Cost", "Seasonality", "Travel Time", "Total Visitors Per Year", ""];
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <section className={ `bg-background p-6 lg:p-12 flex flex-col items-center` }>
             <h3 className="text-2xl text-primary">List of { user.displayName }</h3>

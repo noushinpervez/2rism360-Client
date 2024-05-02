@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../Hooks/useAuth";
@@ -41,6 +41,10 @@ const Login = () => {
                 }
             })
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <section className="flex h-screen">
@@ -86,7 +90,7 @@ const Login = () => {
                     <form className="space-y-4" onSubmit={ handleSubmit(onSubmit) }>
                         <div>
                             <label className="block text-sm font-medium">Email</label>
-                            <input type="text" id="email" name="email" placeholder="user@gmail.com" className="mt-1 p-2 w-full border rounded-md focus:border-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-500 bg-primary-70"{ ...register("email", { required: true }) } />
+                            <input type="text" id="email" name="email" placeholder="user@gmail.com" className="mt-1 p-2 w-full border rounded-md focus:border-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-500 bg-primary-70" { ...register("email", { required: true }) } />
                             { errors.email && <p className="pt-2 text-red-400 text-sm italic font-semibold opacity-70">This field is required*</p> }
                         </div>
                         <div>

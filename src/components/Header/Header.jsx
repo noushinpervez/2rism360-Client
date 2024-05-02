@@ -97,9 +97,9 @@ const Header = () => {
             } transition-all duration-500 ease-in-out` }>
             <div className="flex items-center justify-between">
                 <Link to="/"
-                    className="mr-4 cursor-pointer py-1.5 text-2xl"
+                    className="mr-4 cursor-pointer py-1.5 lg:text-3xl text-2xl"
                 >
-                    <span>2rism360</span>
+                    <span className="text-[#36b0f7]">2rism360</span>
                 </Link>
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{ navList }</div>

@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB5Wel0zjAVGHJmNieJQY6q10Wm5y_Qw4M",
-    authDomain: "tourism360-ewu.firebaseapp.com",
-    projectId: "tourism360-ewu",
-    storageBucket: "tourism360-ewu.appspot.com",
-    messagingSenderId: "333410355475",
-    appId: "1:333410355475:web:a4b8ce22aec278096472e6"
+    apiKey: import.meta.env.VITE_API_KEY,
+    authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_APP_ID
 };
 
 // Initialize Firebase

@@ -13,6 +13,10 @@ const TouristSpotDetails = () => {
             })
     }, [id]);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <section className="flex flex-col lg:flex-row gap-6 lg:gap-12 text-text font-medium text-base p-6 lg:p-12 bg-background tracking-wider">
             <div className="rounded-2xl flex items-center justify-center flex-1">
@@ -29,7 +33,7 @@ const TouristSpotDetails = () => {
                         <tbody>
                             <tr>
                                 <td className="pr-4 py-3 text-textColor font-bold align-top opacity-80">Description</td>
-                                <td className="text-textColor/70 py-3 text-justify">{touristSpot.short_description}</td>
+                                <td className="text-textColor/70 py-3 text-justify">{ touristSpot.short_description }</td>
                             </tr>
                         </tbody>
                     </table>
@@ -53,6 +57,10 @@ const TouristSpotDetails = () => {
                             <tr>
                                 <td className="py-2 opacity-80 pr-4">Total Visitors Per Year</td>
                                 <td className="text-textColor font-semibold">{ touristSpot.totalVisitorsPerYear }</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2 opacity-80">Added by</td>
+                                <td className="text-textColor font-semibold">{ touristSpot.username } ({ touristSpot.email })</td>
                             </tr>
                         </tbody>
                     </table>

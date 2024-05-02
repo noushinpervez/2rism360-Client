@@ -1,4 +1,4 @@
-const Newsletter = () => {
+const Countries = () => {
     return (
         <div>
             
@@ -6,4 +6,4 @@ const Newsletter = () => {
     );
 };
 
-export default Newsletter;
+export default Countries;
