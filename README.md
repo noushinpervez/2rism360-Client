@@ -4,8 +4,8 @@
 
 ## Live Site
 
-[2rism360 Firebase](tourism360-ewu.web.app)
-[2rism360 Netlify](2rism360.netlify.app)
+- [2rism360 Firebase](https://tourism360-ewu.web.app/)
+- [2rism360 Netlify](https://2rism360.netlify.app/)
 
 ## Features
 
