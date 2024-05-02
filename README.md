@@ -9,16 +9,13 @@
 
 ## Features
 
-- **Comprehensive Tourist Spot Listings:** Discover iconic destinations like Sundarban in Bangladesh, Ha Long Bay in Vietnam and Bali in Indonesia and many more.
+- **Comprehensive Tourist Spot Listings:** Discover iconic destinations like Sundarban in Bangladesh, Ha Long Bay in Vietnam, and Bali in Indonesia, among many others.
 - **User Authentication:** Secure login and registration system with email/password and social media (Google and GitHub) authentication options.
-- **Personalized Experience:** Logged-in users can add spots to their list for future reference.
-- **Interactive UI:** Engaging sliders, informative cards and intuitive navigation for seamless exploration.
-- **Responsive Design:** Ensuring optimal viewing experience across all devices, from desktops to smartphones.
-- **Data Management:** CRUD operations for managing tourist spots, including adding, updating and deleting entries.
-- **Dark/Light Theme Toggle:** Customize the website's appearance (light and dark mode) based on user preference for enhanced readability.
-- **Loading Spinner:** Visual feedback during data fetching to improve user experience.
-- **Footer with Social Integration:** Stay connected through social media links for updates and interactions.
-- **404 Page:** Ensuring a user-friendly experience even in case of navigation errors.
+- **Personalized Experience:** Logged-in users can add spots to contribute to the list for future reference, creating a personalized travel itinerary.
+- **Interactive UI:** Engaging sliders, informative cards, and intuitive navigation for seamless exploration of tourist spots.
+- **Responsive Design:** Ensuring an optimal viewing experience across all devices, from desktops to smartphones, for travelers on the go.
+- **Data Management:** CRUD operations for managing tourist spots, including adding, updating, and deleting entries to keep information up-to-date.
+- **Dark/Light Theme Toggle:** Customize the website's appearance with light and dark mode options based on user preference for enhanced readability and visual comfort.
 
 ## Technologies Used
 
