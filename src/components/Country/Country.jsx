@@ -19,10 +19,6 @@ const Country = () => {
             })
     }, [country]);
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     return (
         <section className="py-6 lg:py-12 bg-background">
             {

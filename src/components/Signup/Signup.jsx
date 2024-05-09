@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../Hooks/useAuth";
 import { toast } from "react-toastify";
-import { useEffect } from "react";
 
 const Signup = () => {
     const { createUser, updateUserProfile } = useAuth();
@@ -27,10 +26,6 @@ const Signup = () => {
                     });
             });
     };
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     return (
         <section className="flex h-screen flex-row-reverse">

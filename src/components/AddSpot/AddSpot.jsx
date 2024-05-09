@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import useAuth from "../Hooks/useAuth";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -41,10 +40,6 @@ const AddSpot = () => {
                 }
             })
     };
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     return (
         <section className="lg:px-0 px-6 py-10 bg-background">

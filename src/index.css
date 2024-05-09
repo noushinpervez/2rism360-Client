@@ -40,6 +40,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3,
@@ -78,6 +82,17 @@ body {
 
   100% {
     top: 0px
+  }
+}
+
+img {
+  opacity: 0;
+  animation: img-animation 0.5s linear forwards;
+}
+
+@keyframes img-animation {
+  100% {
+    opacity: 1;
   }
 }
 

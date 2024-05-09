@@ -96,10 +96,10 @@ const Header = () => {
         <nav className={ `w-full block fixed top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 text-text ${(scrolled || !isHomePage || openNav) ? 'bg-background sticky' : 'bg-transparent'
             } transition-all duration-500 ease-in-out` }>
             <div className="flex items-center justify-between">
-                <Link to="/"
-                    className="mr-4 cursor-pointer py-1.5 lg:text-3xl text-2xl"
-                >
-                    <span className="text-[#36b0f7]">2rism360</span>
+                <Link to="/" className="mr-4 cursor-pointer py-1.5 lg:text-3xl text-2xl">
+                    <p className="italic text-text font-semibold">
+                        2rism<span style={ { color: 'transparent', WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'var(--text)' } }>360</span>
+                    </p>
                 </Link>
                 <div className="flex items-center gap-4">
                     <div className="mr-4 hidden lg:block">{ navList }</div>

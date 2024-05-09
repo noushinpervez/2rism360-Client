@@ -20,7 +20,9 @@ const Footer = () => {
                         <div className="flex items-center justify-center w-12 h-12 rounded-full">
                             <img src="./logo.png" alt="logo" className="w-10 h-10" />
                         </div>
-                        <span className="self-center text-2xl font-semibold">2rism360</span>
+                        <p className="italic text-3xl font-semibold self-center text-text">
+                            2rism<span style={ { color: 'transparent', WebkitTextStrokeWidth: '1px', WebkitTextStrokeColor: 'var(--text)' } }>360</span>
+                        </p>
                     </a>
                 </div>
                 <div className="grid grid-cols-2 text-base gap-x-8 gap-y-8 lg:w-2/3 lg:grid-cols-4 justify-between">

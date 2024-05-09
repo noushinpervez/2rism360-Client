@@ -37,10 +37,6 @@ const AllSpot = () => {
         }
     };
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     return (
         <section className="lg:px-0 px-6 py-10 bg-background">
             <h3 className="text-2xl text-center mb-6 text-primary tracking-widest">All Tourists Spots</h3>

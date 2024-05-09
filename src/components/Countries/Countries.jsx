@@ -12,10 +12,6 @@ const Countries = () => {
             })
     }, []);
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     return (
         <section className="lg:py-20 py-10 bg-background">
             <h3 className="text-2xl text-center mb-12 tracking-widest text-primary">Countries</h3>

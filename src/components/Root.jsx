@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { useEffect } from "react";
@@ -23,12 +23,9 @@ const Root = () => {
 
     const storedTheme = localStorage.getItem("theme") || "light";
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     return (
         <>
+            <ScrollRestoration />
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>
