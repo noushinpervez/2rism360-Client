@@ -1,26 +1,59 @@
-# 2rism360: Explore Southeast Asia with Ease
+# 2rism360
 
-## Live Site
+## Project Overview
+**2rism360** is a tourism management website focusing on Southeast Asia. It aims to provide information about various tourist spots in countries like Bangladesh, Thailand, Indonesia, Malaysia, Vietnam, and Cambodia, helping users in planning their trips effectively.
 
-- [2rism360 Firebase](https://tourism360-ewu.web.app/)
-- [2rism360 Netlify](https://2rism360.netlify.app/)
-
-## Category Selected: Southeast Asia
-
-## Features
-
-- **Comprehensive Tourism Information:** Explore the diverse beauty of Southeast Asia with detailed information on tourist spots in Bangladesh, Thailand, Indonesia, Malaysia, Vietnam and Cambodia.
-- **User Authentication:** Secure access to the platform with Firebase authentication system with email/password, Google and GitHub authentication options.
-- **Personalized Experience:** Register and create your profile to access exclusive features like adding spots to the list, updating information and managing your travel preferences.
-- **Interactive UI:** Engaging sliders, informative cards and seamless navigation for seamless exploration of tourist spots.
-- **Responsive Design:** Enjoy a consistent experience across all devices, including mobile phones, tablets and desktops, ensuring accessibility anytime, anywhere.
-- **Data Management:** CRUD operations for managing tourist spots, including adding, updating and deleting entries to keep information accurate and up-to-date.
-- **Dark/Light Theme Toggle:** Customize the browsing experience with light and dark themes based on user preference for enhanced readability and visual comfort.
+## Key Features
+- **User Authentication and Authorization:** Secure login and registration using Firebase authentication with Google and GitHub Sign-in integration.
+- **CRUD Operations:** Users can add, update, view, and delete tourist spots. Private routes ensure only authenticated users can perform these actions to keep information accurate and up-to-date.
+- **Dynamic Content:** Display tourist spots categorized by countries with detailed information such as location, average cost, seasonality, and travel time.
 
 ## Technologies Used
+- **Frontend:** HTML, CSS, JavaScript, React, Tailwind CSS
+- **Backend:** Node.js, Express.js, MongoDB
+- **Authentication:** Firebase (Email/Password, Social Login: Google, GitHub)
+- **Hosting:** Netlify (Frontend), Vercel (Backend)
 
-- Frontend: React.js, Tailwind CSS
-- Backend: Node.js, Express.js, MongoDB
-- Authentication: Firebase Authentication
-- Deployment: Vercel (Backend), Firebase Hosting (Frontend), Netlify (Frontend)
-- Additional Libraries: React Simple Typewriter, React Toastify, Material Tailwind React, SweetAlert2, Swiper
+## Live Site
+[Visit 2rism360](https://2rism360.netlify.app/)
+
+## Server Repository
+[2rism360 Server Repository](https://github.com/noushinpervez/2rism360-Server)
+
+## Local Setup Instructions
+To run the project locally, follow these steps:
+
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/noushinpervez/2rism360-Client.git
+    ```
+
+2. **Navigate to the project directory and install dependencies:**
+    ```sh
+    cd 2rism360-Client
+    npm install
+    ```
+
+3. **Set up environment variables:**
+   - Create a `.env` file in the client directory and add necessary configuration variables (Firebase config):
+   
+   ```plaintext
+   VITE_API_KEY=
+   VITE_AUTH_DOMAIN=
+   VITE_PROJECT_ID=
+   VITE_STORAGE_BUCKET=
+   VITE_MESSAGING_SENDER_ID=
+   VITE_APP_ID=
+   ```
+
+   - Replace each variable (VITE_API_KEY, VITE_AUTH_DOMAIN, etc.) with your actual configuration keys and values **without quotations**.
+
+4. **Run the client:**
+    ```sh
+    npm run dev
+    ```
+
+5. **Access the application:**
+    The application will run on `http://localhost:5173`.
+
+Follow these instructions to set up and locally run the client-side of 2rism360 to explore its features and functionalities.

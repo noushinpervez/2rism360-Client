@@ -41,7 +41,7 @@ const Signup = () => {
                     <form className="space-y-4" onSubmit={ handleSubmit(onSubmit) }>
                         <div>
                             <label className="block font-medium">Name</label>
-                            <input type="text" id="name" name="name" placeholder="First Name & Last Name" className="mt-1 p-2 w-full border rounded-md focus:border-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-500 bg-primary-70"  { ...register("fullName", { required: true }) } />
+                            <input type="text" id="name" name="name" placeholder="First Name & Last Name" className="mt-1 p-2 w-full border rounded-md focus:border-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-500 bg-primary-70" { ...register("fullName", { required: true }) } />
                             { errors.fullName && <p className="pt-2 text-red-400 italic font-semibold opacity-70">This field is required*</p> }
                         </div>
                         <div>
